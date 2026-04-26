@@ -1,0 +1,45 @@
+class Base
+{
+    public int i;
+    
+    public Base()
+    {
+        System.out.println("Inside Base constructure");
+        this.i=11;
+    }
+
+    public void fun()
+    {
+        System.out.println("Inside Base fun");
+    }
+}
+
+class Derived extends Base
+{
+    public int i;
+
+    public Derived()
+    {
+        System.out.println("Inside Derivedd Constructor");
+        this.i=21;
+    }
+
+    public void gun()
+    {
+        System.out.println("Inside gun of Derived");
+        System.out.println("Value of i : "+i);
+        System.out.println("Value of i from base : "+super.i);
+    }
+
+}
+
+
+class ThisSuperXX
+{
+    public static void main(String A[]) 
+    {
+        Derived dobj = new Derived();
+        
+        dobj.gun();
+    }
+}
